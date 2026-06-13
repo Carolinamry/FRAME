@@ -1,0 +1,483 @@
+/* =========================
+   HERO
+========================= */
+
+.discover-hero{
+    max-width:1000px;
+    margin:80px auto;
+    padding:0 40px;
+    text-align:left;
+}
+
+.discover-hero span{
+    letter-spacing:4px;
+    color:#8b4a1e;
+    font-size:14px;
+}
+
+.discover-hero h1{
+    font-size:60px;
+    margin:20px 0;
+    line-height:1.2;
+    color:#2a1005;
+}
+
+.discover-hero p{
+    color:#6b4228;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+
+
+/* =========================
+   CATEGORIAS
+========================= */
+
+.movie-category{
+    padding:0 60px;
+    margin-bottom:80px;
+}
+
+.movie-category h2{
+        font-size:32px;
+    margin-bottom:35px;
+    color:#2a1005;
+    padding-left:2px;
+}
+
+.movies-row{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding-top:15px;
+    padding-bottom:35px;
+}
+
+/* =========================
+   CATEGORY HEADER
+========================= */
+
+.category-header{
+    margin-bottom:25px;
+}
+
+/* =========================
+   FILEIRA DE FILMES
+========================= */
+
+.movies-row{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding-bottom:35px;
+}
+
+
+/* =========================
+   CARD DOS FILMES
+========================= */
+
+.movie-card{
+    min-width:250px;
+    max-width:250px;
+    cursor:pointer;
+    transition:.35s ease;
+}
+
+.movie-card img{
+    width:100%;
+    aspect-ratio:2/3;
+    object-fit:cover;
+    border-radius:18px;
+    display:block;
+    transition:
+        transform .35s ease,
+        filter .35s ease,
+        box-shadow .35s ease;
+}
+
+.movie-card h3{
+    margin-top:18px;
+    font-size:15px;
+    color:#2a1005;
+    transition:.3s ease;
+}
+
+.movie-card span{
+    color:#9a7860;
+    font-size:15px;
+}
+
+.movie-card:hover{
+    transform:translateY(-8px);
+}
+
+.movie-card:hover img{
+    transform:scale(1.025);
+    filter:brightness(0.82);
+    box-shadow:0 18px 35px rgba(42,16,5,0.24);
+}
+
+.movie-card:hover h3{
+    color:#8b4a1e;
+}
+/* =========================
+   RECOMENDAÇÃO FRAME
+========================= */
+
+.frame-score{
+    margin-top:8px;
+    color:#b87820;
+    font-size:14px;
+    font-weight:600;
+}
+
+.genre-description{
+    color:#6b4228;
+    margin-bottom:25px;
+    max-width:700px;
+    line-height:1.7;
+}
+
+/* =========================
+   CARROSSEL DE DESTAQUE
+========================= */
+
+.movie-carousel{
+    position:relative;
+    width:100%;
+    height:620px;
+    overflow:hidden;
+    background:#140802;
+    margin-bottom:120px;
+}
+
+.carousel-slide{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    opacity:0;
+    transition:opacity 1s ease;
+    display:flex;
+    align-items:center;
+    padding:0 90px;
+}
+
+.carousel-slide::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+         to right,
+    rgba(20,8,2,0.95) 0%,
+    rgba(20,8,2,0.75) 45%,
+    rgba(20,8,2,0.20) 100%
+    );
+}
+
+.carousel-slide.active{
+    opacity:1;
+    z-index:1;
+}
+
+.carousel-content{
+    position:relative;
+    z-index:2;
+    max-width:560px;
+    color:#f5e6d0;
+}
+
+.carousel-content span{
+    font-size:12px;
+    letter-spacing:5px;
+    color:#c9902e;
+    text-transform:uppercase;
+}
+
+.carousel-content h1{
+    font-family:'DM Serif Display', serif;
+    font-size:72px;
+    font-weight:400;
+    margin:18px 0;
+}
+
+.carousel-content p{
+    font-size:18px;
+    line-height:1.8;
+    color:#d9c1a0;
+    margin-bottom:34px;
+}
+
+.carousel-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#c9902e;
+    color:#140802;
+    padding:15px 34px;
+    border-radius:50px;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.carousel-btn:hover{
+    background:#a8721f;
+    transform:translateY(-2px);
+}
+
+.carousel-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:3;
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:rgba(245,230,208,0.18);
+    color:#f5e6d0;
+    font-size:28px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.carousel-arrow:hover{
+    background:#c9902e;
+    color:#140802;
+    transform:translateY(-50%) scale(1.08);
+}
+
+.carousel-arrow.left{
+    left:30px;
+}
+
+.carousel-arrow.right{
+    right:30px;
+}
+
+.carousel-dots{
+    position:absolute;
+    bottom:32px;
+    left:90px;
+    z-index:4;
+    display:flex;
+    gap:10px;
+}
+
+.dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:rgba(245,230,208,0.35);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.dot.active{
+    width:28px;
+    border-radius:20px;
+    background:#c9902e;
+}
+
+
+
+/* =========================
+   ESCOLHA FRAME
+========================= */
+
+.frame-pick{
+    text-align:center;
+    max-width:800px;
+    margin:120px auto;
+    padding:60px;
+    background:#faf4ea;
+    border-radius:30px;
+    box-shadow:0 15px 30px rgba(42,16,5,.07);
+}
+
+.frame-pick span{
+    color:#8b4a1e;
+    font-size:15px;
+    letter-spacing:5px;
+}
+
+.frame-pick h2{
+    font-family:'DM Serif Display', serif;
+    font-size:50px;
+    font-weight:400;
+    margin:20px 0;
+    color:#2a1005;
+    line-height:1.2;
+}
+
+.frame-pick h2 em{
+    font-style:italic;
+    color:#c9902e;
+}
+
+.frame-pick p{
+    color:#6b4228;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.frame-pick a{
+    display:inline-block;
+    text-decoration:none;
+    background:#2a1005;
+    color:#f5e6d0;
+    padding:15px 35px;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.frame-pick a:hover{
+    transform:translateY(-4px);
+    background:#3d1a09;
+}
+
+/* =========================
+   BADGES DOS FILMES
+========================= */
+
+.movie-card{
+    position:relative;
+}
+
+.movie-badge{
+    position:absolute;
+    top:12px;
+    left:12px;
+    z-index:2;
+
+    background:rgba(20,8,2,0.85);
+    color:#f5e6d0;
+
+    padding:8px 12px;
+    border-radius:50px;
+
+    font-size:11px;
+    letter-spacing:1px;
+    font-weight:600;
+
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(245,230,208,0.15);
+
+    transition:.3s ease;
+}
+
+.movie-card:hover .movie-badge{
+    background:#c9902e;
+    color:#140802;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    background:#1a0c03;
+    padding:70px 80px 30px;
+    margin-top:120px;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.footer-brand{
+    max-width:340px;
+}
+
+.footer-brand h3{
+    font-family:'DM Serif Display', serif;
+    font-size:34px;
+    color:#f5e6d0;
+    margin-bottom:16px;
+}
+
+.footer-brand p{
+    color:#9f846d;
+    line-height:1.8;
+}
+
+.footer-links,
+.footer-info{
+    display:flex;
+    flex-direction:column;
+}
+
+.footer h4{
+    color:#f5e6d0;
+    margin-bottom:18px;
+    font-size:16px;
+}
+
+.footer-links a{
+    text-decoration:none;
+    color:#9f846d;
+    margin-bottom:12px;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#c9902e;
+}
+
+.footer-info p{
+    color:#9f846d;
+    margin-bottom:10px;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(245,230,208,0.08);
+    margin-top:50px;
+    padding-top:25px;
+    text-align:center;
+}
+
+.footer-bottom p{
+    color:#7d6655;
+    font-size:14px;
+}
+
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media(max-width:900px){
+
+    .discover-hero{
+        text-align:center;
+        padding:0 20px;
+    }
+
+    .discover-hero h1{
+        font-size:42px;
+    }
+
+    .movie-category{
+        padding:0 20px;
+    }
+
+    .movie-category h2{
+        font-size:26px;
+    }
+
+    .movie-card{
+        min-width:180px;
+    }
+
+    .frame-pick h2{
+        font-size:34px;
+    }
+}
+
