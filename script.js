@@ -76,8 +76,11 @@ dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
         currentSlide = index;
         showSlide(currentSlide);
+        
     });
 });
+
+
 
 
 

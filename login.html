@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRAME | Acesso</title>
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="access-page">
+
+    <main class="access-card">
+
+        <div class="access-left">
+            <h1>FRAME</h1>
+            <p>Seu guia para descobrir filmes incríveis.</p>
+
+            <div class="access-buttons">
+                <button onclick="mostrarLogin()">Login</button>
+                <button onclick="mostrarCadastro()">Cadastro</button>
+            </div>
+
+            <form id="login-form" class="access-form" action="index.html">
+                <h2>Login</h2>
+
+                <input type="email" placeholder="E-mail">
+                <input type="password" placeholder="Senha">
+
+                <button type="submit">Entrar</button>
+            </form>
+
+            <form id="cadastro-form" class="access-form hidden" action="index.html">
+                <h2>Cadastro</h2>
+
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="E-mail">
+                <input type="password" placeholder="Senha">
+                <input type="password" placeholder="Confirmar senha">
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+
+        <div class="access-right">
+            <h2>Bem-vindo ao universo FRAME</h2>
+            <p>Explore filmes, tendências e recomendações feitas para você.</p>
+        </div>
+
+    </main>
+
+    <script>
+        function mostrarLogin(){
+            document.getElementById("login-form").classList.remove("hidden");
+            document.getElementById("cadastro-form").classList.add("hidden");
+        }
+
+        function mostrarCadastro(){
+            document.getElementById("cadastro-form").classList.remove("hidden");
+            document.getElementById("login-form").classList.add("hidden");
+        }
+    </script>
+
+</body>
+</html>
