@@ -16,6 +16,24 @@ header{
     align-items:center;
     padding:50px 90px;
 }
+.login-btn{
+    text-decoration:none;
+    color:#3b1a08;
+    font-size:15px;
+
+    padding:11px 22px;
+    border:1px solid #8b4a1e;
+    border-radius:50px;
+
+    background:transparent;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    background:#2a1005;
+    color:#f5e6d0;
+    opacity:1;
+}
 
 html{
     scroll-behavior:smooth;

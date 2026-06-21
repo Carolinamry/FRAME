@@ -332,6 +332,62 @@
     line-height:1.8;
 }
 
+#theme-toggle{
+    position:absolute;
+    top:25px;
+    right:25px;
+
+    width:45px;
+    height:45px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#2a1005;
+    color:#f5e6d0;
+
+    cursor:pointer;
+    font-size:18px;
+
+    transition:.3s;
+}
+
+#theme-toggle:hover{
+    transform:scale(1.08);
+}
+
+.dark-mode{
+    background:#121212;
+}
+
+.dark-mode .access-card{
+    background:#1f1f1f;
+}
+
+.dark-mode .access-left h1,
+.dark-mode .access-form h2{
+    color:#f5e6d0;
+}
+
+.dark-mode .access-left p{
+    color:#c9c9c9;
+}
+
+.dark-mode .access-form input{
+    background:#2c2c2c;
+    color:white;
+}
+
+.dark-mode .access-buttons button{
+    border:1px solid #c9902e;
+    color:#f5e6d0;
+}
+
+.dark-mode .access-buttons button:hover{
+    background:#c9902e;
+    color:#140802;
+}
+
 
 
 /* =========================

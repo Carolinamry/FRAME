@@ -64,18 +64,6 @@
 }
 
 /* =========================
-   FILEIRA DE FILMES
-========================= */
-
-.movies-row{
-    display:flex;
-    gap:20px;
-    overflow-x:auto;
-    padding-bottom:35px;
-}
-
-
-/* =========================
    CARD DOS FILMES
 ========================= */
 
@@ -373,81 +361,6 @@
     background:#c9902e;
     color:#140802;
 }
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer{
-    background:#1a0c03;
-    padding:70px 80px 30px;
-    margin-top:120px;
-}
-
-.footer-content{
-    display:flex;
-    justify-content:space-between;
-    gap:60px;
-    flex-wrap:wrap;
-}
-
-.footer-brand{
-    max-width:340px;
-}
-
-.footer-brand h3{
-    font-family:'DM Serif Display', serif;
-    font-size:34px;
-    color:#f5e6d0;
-    margin-bottom:16px;
-}
-
-.footer-brand p{
-    color:#9f846d;
-    line-height:1.8;
-}
-
-.footer-links,
-.footer-info{
-    display:flex;
-    flex-direction:column;
-}
-
-.footer h4{
-    color:#f5e6d0;
-    margin-bottom:18px;
-    font-size:16px;
-}
-
-.footer-links a{
-    text-decoration:none;
-    color:#9f846d;
-    margin-bottom:12px;
-    transition:.3s;
-}
-
-.footer-links a:hover{
-    color:#c9902e;
-}
-
-.footer-info p{
-    color:#9f846d;
-    margin-bottom:10px;
-}
-
-.footer-bottom{
-    border-top:1px solid rgba(245,230,208,0.08);
-    margin-top:50px;
-    padding-top:25px;
-    text-align:center;
-}
-
-.footer-bottom p{
-    color:#7d6655;
-    font-size:14px;
-}
-
-
 
 /* =========================
    RESPONSIVO

@@ -10,7 +10,7 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0.4
 });
 
-pillars.forEach(pillar => {
+pillars.forEach(pillar => {  
     observer.observe(pillar);
 });
 
@@ -83,5 +83,50 @@ dots.forEach((dot, index) => {
 
 
 
+/* =========================
+   LOGIN E CADASTRO
+========================= */
 
-   
+const themeBtn = document.getElementById("theme-toggle");
+
+if(themeBtn){
+
+    themeBtn.addEventListener("click", () => {
+
+        document.body.classList.toggle("dark-mode");
+
+        if(document.body.classList.contains("dark-mode")){
+            themeBtn.textContent = "☀️";
+        }else{
+            themeBtn.textContent = "🌙";
+        }
+
+    });
+
+}
+
+function mostrarLogin(){
+
+    const loginForm = document.getElementById("login-form");
+    const cadastroForm = document.getElementById("cadastro-form");
+
+    if(loginForm && cadastroForm){
+
+        loginForm.classList.remove("hidden");
+        cadastroForm.classList.add("hidden");
+
+    }
+}
+
+function mostrarCadastro(){
+
+    const loginForm = document.getElementById("login-form");
+    const cadastroForm = document.getElementById("cadastro-form");
+
+    if(loginForm && cadastroForm){
+
+        cadastroForm.classList.remove("hidden");
+        loginForm.classList.add("hidden");
+
+    }
+} 
