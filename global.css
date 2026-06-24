@@ -16,6 +16,15 @@ header{
     align-items:center;
     padding:50px 90px;
 }
+
+html{
+    scroll-behavior:smooth;
+}
+
+.logo img{
+    width:300px;
+    height:auto;
+}
 .login-btn{
     text-decoration:none;
     color:#3b1a08;
@@ -34,16 +43,6 @@ header{
     color:#f5e6d0;
     opacity:1;
 }
-
-html{
-    scroll-behavior:smooth;
-}
-
-.logo img{
-    width:300px;
-    height:auto;
-}
-
 nav{
     display:flex;
     gap:50px;
@@ -164,20 +163,6 @@ nav a:hover{
 .footer-bottom p{
     color:#7d6655;
     font-size:14px;
-}
-
-/* RESPONSIVO */
-
-@media(max-width:900px){
-
-    .footer{
-        padding:60px 30px 30px;
-    }
-
-    .footer-content{
-        flex-direction:column;
-        gap:40px;
-    }
 }
 /* RESPONSIVO */
 

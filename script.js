@@ -1,3 +1,7 @@
+/* =========================
+   ANIMAÇÃO DOS PILARES
+========================= */
+
 const pillars = document.querySelectorAll('.pillar');
 
 const observer = new IntersectionObserver((entries) => {
@@ -14,9 +18,15 @@ pillars.forEach(pillar => {
     observer.observe(pillar);
 });
 
+
+/* =========================
+   CARROSSEL
+========================= */
+
 const slides = document.querySelectorAll('.carousel-slide');
 const nextBtn = document.querySelector('.carousel-arrow.right');
 const prevBtn = document.querySelector('.carousel-arrow.left');
+const dots = document.querySelectorAll('.dot');
 
 let currentSlide = 0;
 
@@ -25,7 +35,15 @@ function showSlide(index){
         slide.classList.remove('active');
     });
 
+    dots.forEach(dot => {
+        dot.classList.remove('active');
+    });
+
     slides[index].classList.add('active');
+
+    if(dots.length > 0){
+        dots[index].classList.add('active');
+    }
 }
 
 function nextSlide(){
@@ -55,32 +73,12 @@ if(nextBtn && prevBtn && slides.length > 0){
     setInterval(nextSlide, 5000);
 }
 
-
-
-const dots = document.querySelectorAll('.dot');
-
-function showSlide(index){
-    slides.forEach(slide => {
-        slide.classList.remove('active');
-    });
-
-    dots.forEach(dot => {
-        dot.classList.remove('active');
-    });
-
-    slides[index].classList.add('active');
-    dots[index].classList.add('active');
-}
-
 dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
         currentSlide = index;
         showSlide(currentSlide);
-        
     });
 });
-
-
 
 
 /* =========================
@@ -111,10 +109,8 @@ function mostrarLogin(){
     const cadastroForm = document.getElementById("cadastro-form");
 
     if(loginForm && cadastroForm){
-
         loginForm.classList.remove("hidden");
         cadastroForm.classList.add("hidden");
-
     }
 }
 
@@ -124,9 +120,7 @@ function mostrarCadastro(){
     const cadastroForm = document.getElementById("cadastro-form");
 
     if(loginForm && cadastroForm){
-
         cadastroForm.classList.remove("hidden");
         loginForm.classList.add("hidden");
-
     }
-} 
+}

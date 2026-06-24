@@ -1,33 +1,4 @@
-/* =========================
-   HERO
-========================= */
 
-.discover-hero{
-    max-width:1000px;
-    margin:80px auto;
-    padding:0 40px;
-    text-align:left;
-}
-
-.discover-hero span{
-    letter-spacing:4px;
-    color:#8b4a1e;
-    font-size:14px;
-}
-
-.discover-hero h1{
-    font-size:60px;
-    margin:20px 0;
-    line-height:1.2;
-    color:#2a1005;
-}
-
-.discover-hero p{
-    color:#6b4228;
-    font-size:18px;
-    line-height:1.8;
-    margin-bottom:40px;
-}
 
 
 
@@ -120,13 +91,6 @@
     color:#b87820;
     font-size:14px;
     font-weight:600;
-}
-
-.genre-description{
-    color:#6b4228;
-    margin-bottom:25px;
-    max-width:700px;
-    line-height:1.7;
 }
 
 /* =========================
